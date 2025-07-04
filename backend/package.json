@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend para FlowDays Professional",
+  "main": "app.py",
+  "scripts": {
+    "test": "python -m pytest test_app.py",
+    "dev": "python app.py",
+    "start": "python app.py",
+    "install-deps": "pip install -r requirements.txt",
+    "setup": "pip install -r requirements.txt && python -c \"from app import app, db; app.app_context().push(); db.create_all()\""
+  },
+  "keywords": ["flask", "python", "task-management", "calendar"],
+  "author": "Alcidexpress",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  }
+}
